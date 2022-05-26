@@ -1,0 +1,153 @@
+<html lang="en"><!--RAIZ DE LA PAGINA-->
+<head> <!-- CABECERA-->
+<head>
+    <meta charset="UTF-8">    <!--FORMATO CODIFICACIÓN DE CARACTERES-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!--RESPONSIVE-->
+    <title>Consultas SQL</title>  <!--TITULO DE CABECERA-->
+    <link rel="stylesheet" href="../css/bootstrap.css"> <!--IMPORTACIÓN DE LA BIBLIOTECA BOOTSTRAP5-->
+</head>
+                                  <!--CUERPO DE LA PAGINA -->
+<body>
+  <div class="text-center bg-info text-white">    
+    <h1> CONSULTAS SQL METODO GET </h1>        <!--TITULO ENCABEZADO-->
+  </div>
+                                <!--MENU--> 
+  <div class="contaier" style="margin-left: 15px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Menú</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">           <!--ITEMS DEL MENU-->
+          <li class="nav-item active">
+              <a class="nav-link" href="../index.html">Login <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Usuarios.html">Crear Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Consultas.html">Consultas SQL</a>
+          </li>
+          
+        </ul>  
+      </div>
+    </nav>      <!--CIERRE O FIN DEL MENU -->
+  </div>
+                              <!--INICIO DE UNA NUEVA SECCIÓN -->
+  <div class="container">
+    <div class="abs-center">
+
+        <br> <br> <br>
+
+        <!--GRILLA 1-->
+<div class="row">
+    <div class="col-lg-6 col-sm-6  ">  <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->
+      <br>
+       <h5> Consultas SQL </h5>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="getConsulta1()">Buscar todos Documentos</button>
+        <div id="buscar">
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="getConsulta2()">Buscar todos Perfiles</button>
+        <div id="buscar">
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="getConsulta3()">Buscar todos los registros</button>
+        <div id="buscar">
+        </div>
+        <br>        
+        <div class="row">
+          <!--INICIO DE UNA NUEVA SECCIÓN -->
+      <div class="text-center bg-danger text-white">
+        <h5> Documentos </h5>
+        <!--TITULO ENCABEZADO #3-->
+      </div>
+      <!-- TABLA 1 -->
+      <table id="tableDocu" class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID </th>
+            <th>Tipo de Identificación </th>
+            <th>Estado</th>          
+            
+          </tr>
+        </thead>
+        <tbody id="tableDocuBody"></tbody>
+
+      </table>
+    </div>
+
+    <br>
+    <div class="row">
+      <!--INICIO DE UNA NUEVA SECCIÓN -->
+  <div class="text-center bg-danger text-white">
+    <h5> Perfiles </h5>
+    <!--TITULO ENCABEZADO #3-->
+  </div>
+  <!-- TABLA 1 -->
+  <table id="tablePerf" class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th>ID </th>
+        <th>Tipo de Perfiles </th>
+        <th>Estado</th>          
+        
+      </tr>
+    </thead>
+    <tbody id="tablePerfBody"></tbody>
+
+  </table>
+</div>
+
+<div class="row">
+  <!--INICIO DE UNA NUEVA SECCIÓN -->
+<div class="text-center bg-danger text-white">
+<h5> Listado de Usuarios </h5>
+<!--TITULO ENCABEZADO #3-->
+</div>
+<!-- TABLA 1 -->
+<table id="tableUsuario" class="table table-hover">
+<thead>
+  <tr>
+    <th>ID </th>
+    <th>Nombres y Apellidos </th>
+    <th>Tipo Doc </th>
+    <th>Num Doc </th>
+    <th>Usuario</th>
+    <th>Contraseña</th>
+    <th>Estado</th>
+    <th>Rol</th>
+        
+  </tr>
+</thead>
+<tbody id="tableUsuarioBody"></tbody>
+
+</table>
+</div>
+        
+</div>
+<div class="col-lg-6 col-sm-6 ">  <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->
+    <img src="../img/reservas3.jpg" class="img-fluid">   <!--IMPORTACIÓN DE IMAGEN --> 
+    <div class="col-lg-6 col-sm-6 "> <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->  </div>
+</div>
+</div>
+</div>
+<br><br>
+</div>
+<hr>
+<div class="text-center bg-info text-black">
+  <b> Actualización 11 de Diciembre del 2020 Versión - 2020.12.2.1 <br>
+    www.citasodontoplus.com.co <br>
+    Barranquilla-Colombia <br>
+    +57 - 3090875 - 3105479 <br>
+    citas@odontoplus.com.co <br>
+    Creado por  Royman Rojas</b>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/procesos.js"></script>
+ <!--FIN DE PIE DE PAGINA -->  
+</body> <!--FIN O CIERRE DEL CUERPO DE PAGINA -->
+</html> <!--FIN DE HTML -->
