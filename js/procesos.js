@@ -3,7 +3,7 @@ let usuarios = [];
 let usuario;
 function getUsuarios()
 {
-   axios.get('http://localhost:3000/getUsuarios')
+   axios.get('https://royrojas11.pythonanywhere.com/getUsuarios')
      .then(function (response) {
       console.log(response.data)
       usuarios = response.data
@@ -30,7 +30,7 @@ function getUsuarios()
 
 function getConsulta1()
 {
-   axios.get('http://localhost:3000/getConsulta1')
+   axios.get('https://royrojas11.pythonanywhere.com/getConsulta1')
      .then(function (response) {
       console.log(response.data)
       documentos = response.data
@@ -51,7 +51,7 @@ function getConsulta1()
 
 function getConsulta2()
 {
-   axios.get('http://localhost:3000/getConsulta2')
+   axios.get('https://royrojas11.pythonanywhere.com/getConsulta2')
      .then(function (response) {
       console.log(response.data)
       perfiles = response.data
@@ -71,7 +71,7 @@ function getConsulta2()
 
 function getConsulta3()
 {
-   axios.get('http://localhost:3000/getConsulta3')
+   axios.get('https://royrojas11.pythonanywhere.com/getConsulta3')
      .then(function (response) {
       console.log(response.data)
       usuarios = response.data
@@ -96,7 +96,7 @@ function getConsulta3()
 ////////////////////////// Función Para enlistar Opciones de tipo de documentos en formularios
 function getDocumentos()
 {
-   axios.get('http://localhost:3000/getDocumentos')
+   axios.get('https://royrojas11.pythonanywhere.com/getDocumentos')
      .then(function (response) {
       console.log(response.data)
       document.getElementById("inputiddocumento").innerHTML = response.data.map((item)=>
@@ -110,7 +110,7 @@ function getDocumentos()
 ////////////////////////// Función Para enlistar Opciones de tipo de Perfiles en formulario
 function getPerfil()
 {
-   axios.get('http://localhost:3000/getPerfil')
+   axios.get('https://royrojas11.pythonanywhere.com/getPerfil')
      .then(function (response) {
       console.log(response.data)
       document.getElementById("inputidperfil").innerHTML = response.data.map((item)=>
@@ -143,7 +143,7 @@ function add_Usuarios()
 document.getElementById("form").reset()
 axios ({
     method: 'POST',
-    url: 'http://localhost:3000/add_Usuarios',
+    url: 'https://royrojas11.pythonanywhere.com/add_Usuarios',
     data: nuevousuario,
 }).then(res => console.log(res), alert("Registro Exitoso"))
 .catch(err => console.log('Error: ', err))
@@ -161,7 +161,7 @@ function add_Documentos()
 document.getElementById("formu").reset()
 axios ({
     method: 'POST',
-    url: 'http://localhost:3000/add_Documentos',
+    url: 'https://royrojas11.pythonanywhere.com/add_Documentos',
     data: nuevodocumento,
 }).then(res => console.log(res), alert("Documento Registrado Exitosamente"))
 .catch(err => console.log('Error: ', err))
@@ -177,7 +177,7 @@ function getLogin()
 document.getElementById("formulario").reset()
 axios ({
     method: 'POST',
-    url: 'http://localhost:3000/getLogin',
+    url: 'https://royrojas11.pythonanywhere.com/getLogin',
     data: nuevodocumento,
 }).then(res => {
   console.info(res);
@@ -229,7 +229,7 @@ const id = usuario.idusuario;
 document.getElementById("form").reset()
 axios ({
     method: 'PUT',
-    url: 'http://localhost:3000/update_Usuarios/'+id,
+    url: 'https://royrojas11.pythonanywhere.com/update_Usuarios/'+id,
     data: nuevousuario,
 }).then(res => console.log(res), alert("Usuario actualizado."))
 .catch(err => console.log('Error: ', err))
@@ -239,7 +239,7 @@ axios ({
 function delete_Usuarios(id)
 {
 
-    axios.delete('http://localhost:3000/delete_Usuarios/'+id)
+    axios.delete('https://royrojas11.pythonanywhere.com/delete_Usuarios/'+id)
     .then(res => {
         console.log(res.data)
        
